@@ -51,14 +51,14 @@ include 'includes/nav.php';
                         <label for="items_name">Purchase Price</label>
                         <div class="input-group">
                             <div class="input-group-addon"><i class="mdi mdi-currency-eur"></i></div>
-                            <input type="number" class="form-control" name="purchase" placeholder="Purchase Price" required>
+                            <input type="number" class="form-control" step="any" name="purchase" placeholder="Purchase Price" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="unitprice">Sales Price</label>
                         <div class="input-group">
                             <div class="input-group-addon"><i class="mdi mdi-currency-eur"></i></div>
-                            <input type="number" class="form-control" name="sales_price" placeholder="Sales Price" required>
+                            <input type="number" class="form-control" step="any" name="sales_price" placeholder="Sales Price" required>
                         </div>
                     </div>
 										<div class="form-group">
@@ -72,7 +72,6 @@ include 'includes/nav.php';
 									  		include 'logs\categorylist.php';
 									  ?>
                     <button type="submit" name="submit" class="btn btn-success btn-lg waves-effect waves-light m-r-10">Add</button>
-                    <button type="reset" class="btn btn-inverse btn-lg waves-effect waves-light"<?php if(isset($_GET['msg'])){echo 'disabled';} ?>>New</button>
                 </form>
             </div>
         </div>
