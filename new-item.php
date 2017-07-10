@@ -1,12 +1,4 @@
-<?php
-	ob_start();
-	session_start();
 
-	if(empty($_SESSION['inventoryUserEmail']) || !isset($_SESSION['inventoryUserEmail'])){
-
-			header("location: index.php");
-	}
-?>
 <?php
 include 'includes/nav.php';
 ?>
@@ -73,7 +65,7 @@ include 'includes/nav.php';
                         <label for="phone">Category</label>
                         <div class="input-group">
                             <div class="input-group-addon"><i class="fa fa-reorder"></i></div>
-                            <input type="text" class="form-control" list="catlst" name="cat_name" placeholder="Category Name" required>
+                            <input type="text" class="form-control" list="catlst" name="categoryname" placeholder="Category Name" required>
                         </div>
                     </div>
 										<?php

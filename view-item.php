@@ -1,12 +1,4 @@
-<?php
-	ob_start();
-	session_start();
 
-	if(empty($_SESSION['inventoryUserEmail']) || !isset($_SESSION['inventoryUserEmail'])){
-
-			header("location: index.php");
-	}
-?>
 <?php
 include 'includes/nav.php';
 ?>
@@ -31,8 +23,9 @@ include 'includes/nav.php';
                                              <th>S/N</th>
                                              <th>Item ID</th>
                                              <th>Item Name</th>
-                                             <th>Sales Price</th>
-                                             <th>Purchase Price</th>
+                                             <th>Sales P.</th>
+                                             <th>Purchase P.</th>
+																						 <th>Category</th>
 											 <th>Date</th>
 											 <th>Action</th>
                                          </tr>
@@ -42,8 +35,9 @@ include 'includes/nav.php';
 											 <th>S/N</th>
 											 <th>Item ID</th>
 											 <th>Item Name</th>
-											 <th>Sales Price</th>
-											 <th>Purchase Price</th>
+											 <th>Sales P.</th>
+											 <th>Purchase P.</th>
+											 <th>Category</th>
 											 <th>Date</th>
 											 <th>Action</th>
                                          </tr>
@@ -62,6 +56,7 @@ include 'includes/nav.php';
 														<td>'.$Item['items_name'].'</td>
 														<td>'.$Item['price'].'</td>
 														<td>'.$Item['purchase_price'].'</td>
+														<td>'.$Item['cat_name'].'</td>
 														<td>'.$Item['date'].'</td>
 											<td><a href="logs/delete.php?id1='.$Item['item_id'].'" style="color: red">Delete</a></td>
 														</tr>';

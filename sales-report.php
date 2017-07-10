@@ -1,13 +1,4 @@
 <?php
-	ob_start();
-	session_start();
-
-	if(empty($_SESSION['inventoryUserEmail']) || !isset($_SESSION['inventoryUserEmail'])){
-
-			header("location: index.php");
-	}
-?>
-<?php
 include 'includes/nav.php';
 ?>
 <div class="row page-titles">
@@ -29,26 +20,45 @@ include 'includes/nav.php';
                       <thead>
                           <tr>
                               <th>S/N</th>
-                              <th>Name</th>
-                              <th>Price</th>
+                              <th>Item ID</th>
+                              <th>Item Name</th>
                               <th>Qty</th>
-                              <th>Total</th>
-                              <th>Paid</th>
-                              <th>Balance</th>
-                              <th>Action</th>
+                              <th>Sub Total</th>
+                              <th>Profit</th>
+                              <th>Total Amount</th>
                           </tr>
                       </thead>
                       <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Iphone</td>
-                            <td>2500</td>
-                            <td>12</td>
-                            <td>30000</td>
-                            <td>20</td>
-                            <td>29980</td>
-                            <td><a href="Printhis.php?id=SAL0704123848" style="color: green">Print</a></td>
-                          </tr>
+									 			<?php
+														$c = 1;
+														include 'logs/connect.php';
+
+													$item = $conn->query("SELECT * FROM items");
+													while($items = $item->fetch_assoc()){
+                            $_SESSION['report_sub'] = 0;
+                            $_SESSION['report_gain'] = 0;
+                            $_SESSION['report_quantity'] = 0;
+                            $_SESSION['report_amount'] = 0;
+
+																	 $Sales = $conn->query("SELECT * FROM Sales where items_name =".$items['items_name']);
+																	 while ($Sale = $Sales->fetch_assoc()) {
+																		 $_SESSION['report_amount'] += $Sale['total_amount'];
+																		 $_SESSION['report_gain'] += $Sale['gain'];
+																		 $_SESSION['report_quantity'] += $Sale['quantity'];
+																	}
+														$_SESSION['report_sub'] = $_SESSION['report_amount'] - $_SESSION['report_gain'];
+														echo '<tr>
+															<td>'.$c.'</td>
+															<td>'.$items['item_id'].'</td>
+														<td>'.$items['items_name'].'</td>
+															<td>'.$_SESSION['report_quantity'].'</td>
+															<td>'.$_SESSION['report_sub'].'</td>
+															<td>'.$_SESSION['report_gain'].'</td>
+															<td>'.$_SESSION['report_amount'].'</td>
+															</tr>';
+														$c++;
+																}
+													?>
                       </tbody>
                     </table>
                  </div>
