@@ -71,7 +71,9 @@ include 'includes/nav.php';
                       </div>
                   </div>
                   <button type="submit" class="btn btn-success btn-lg waves-effect waves-light m-r-10">Add</button>
-                  <a href="logs/addCart.php?new=sales" class="btn btn-inverse btn-lg waves-effect waves-light">New</a>
+									<?php if(isset($_GET['id'])){ echo'
+                  <a href="logs/addCart.php?new=sales" class="btn btn-inverse btn-lg waves-effect waves-light">New</a>';
+                  }  ?>
               </form>
           </div>
       </div>
