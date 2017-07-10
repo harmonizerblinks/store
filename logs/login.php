@@ -21,6 +21,7 @@ include 'connect.php';
 			$_SESSION['inventoryprivilege'] = $user['privilege'];
 			$_SESSION['inventoryUserEmail'] = $_POST['email'];
 			$_SESSION['inventoryUserFullname'] = $user['full_name'];
+			$_SESSION['cartid'] = 0;
 			$conn->close();
 			header("Location: ../dashboard.php");
 		}else{

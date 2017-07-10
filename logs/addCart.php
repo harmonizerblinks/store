@@ -5,7 +5,7 @@ if(empty($_GET['id']) || !isset($_GET['id']) ){
 		session_start();
 		unset($_SESSION['sales']);
 		unset($_SESSION['total']);
-		unset($_SESSION['quantities']);\
+		unset($_SESSION['quantities']);
 		header("location: ../new-sales.php");
 		//session_destroy();
 	}

@@ -1,12 +1,4 @@
-<?php
-	ob_start();
-	session_start();
 
-	if(empty($_SESSION['inventoryUserEmail']) || !isset($_SESSION['inventoryUserEmail'])){
-
-			header("location: index.php");
-	}
-?>
 <?php
 include 'includes/nav.php';
 ?>

@@ -1,3 +1,12 @@
+<?php
+	ob_start();
+	session_start();
+
+	if(empty($_SESSION['inventoryUserEmail']) || !isset($_SESSION['inventoryUserEmail'])){
+
+			header("location: index.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,7 +119,7 @@
                         <li>
                             <a class="has-arrow " href="#" aria-expanded="false" data-toggle="tooltip" title="Report"><i class="fa fa-files-o"></i><span class="hide-menu">Report</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="widget-data.html">This Month</a></li>
+                                <li><a href="sales-report.php">Sales</a></li>
                                 <li><a href="widget-charts.html">This Year</a></li>
                             </ul>
                         </li>
