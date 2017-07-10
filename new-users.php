@@ -68,7 +68,7 @@ include 'includes/nav.php';
                     </div>
                     <div class="form-group">
                         <label for="conpass">Privilege:</label>
-                        <div class="input-group"> 
+                        <div class="input-group">
                           <div class="input-group-addon"><i class="mdi mdi- "></i></div>
                           <select name="priv" class="form-control" id="privilege"  required>
                             <option value="0"> --- Select Privilege --- </option>
@@ -88,7 +88,6 @@ include 'includes/nav.php';
                      <div class="card">
                          <div class="card-block">
                              <h4 class="card-title">View All Users Details</h4>
-                             <h6 class="card-subtitle">Export data to Copy, Excel, PDF & Print</h6>
                              <div class="table-responsive m-t-40">
                                   <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                      <thead>

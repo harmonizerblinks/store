@@ -87,6 +87,7 @@
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="new-item.php">Add Product</a></li>
                                 <li><a href="view-item.php">View All Product</a></li>
+                                <li><a href="category.php">Product Category</a></li>
                             </ul>
                         </li>
                         <li>

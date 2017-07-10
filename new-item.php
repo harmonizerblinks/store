@@ -69,6 +69,16 @@ include 'includes/nav.php';
                             <input type="number" class="form-control" name="sales_price" placeholder="Sales Price" required>
                         </div>
                     </div>
+										<div class="form-group">
+                        <label for="phone">Category</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-reorder"></i></div>
+                            <input type="text" class="form-control" list="catlst" name="cat_name" placeholder="Category Name" required>
+                        </div>
+                    </div>
+										<?php
+									  		include 'logs\categorylist.php';
+									  ?>
                     <button type="submit" name="submit" class="btn btn-success btn-lg waves-effect waves-light m-r-10">Add</button>
                     <button type="reset" class="btn btn-inverse btn-lg waves-effect waves-light"<?php if(isset($_GET['msg'])){echo 'disabled';} ?>>New</button>
                 </form>

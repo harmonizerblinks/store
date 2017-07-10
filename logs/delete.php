@@ -1,16 +1,16 @@
-<?php 
+<?php
 	ob_start();
-	session_start();  
+	session_start();
 
 	if($_SESSION['inventoryprivilege'] != 1){
 
 			header("location: ../dashboard.php");
 	}else{
-		
+
 	include 'connect.php';
 
 	if (isset($_GET['id'])) {
-		
+
 		$id = $_GET['id'];
 		//$conn = new mysqli("localhost", "root", "", "inventory");
 
@@ -24,7 +24,7 @@
 
 
 	} elseif (isset($_GET['id1'])) {
-		
+
 		$id1 = $_GET['id1'];
 		//$conn = new mysqli("localhost", "root", "", "inventory");
 
@@ -38,7 +38,7 @@
 
 
 	} elseif (isset($_GET['id2'])) {
-		
+
 		$id2 = $_GET['id2'];
 		//$conn = new mysqli("localhost", "root", "", "inventory");
 
@@ -51,7 +51,7 @@
 		}
 
 	} elseif (isset($_GET['id3'])) {
-		
+
 		$id3 = $_GET['id3'];
 		//$conn = new mysqli("localhost", "root", "", "inventory");
 
@@ -64,8 +64,8 @@
 		}
 
 	} elseif (isset($_GET['id4'])) {
-		
-		$id3 = $_GET['id3'];
+
+		$id4 = $_GET['id4'];
 		//$conn = new mysqli("localhost", "root", "", "inventory");
 
 		$sql = "DELETE FROM users where employee_id = '$id4' ";
@@ -74,6 +74,21 @@
 			header("location: ../view-users.php?msg=supply Deleted Successfully");
 		}else{
 			header("location: ../view-users.php?msg=Unable to Delete supply");
+		}
+
+
+	}
+	elseif (isset($_GET['id5'])) {
+
+		$id5 = $_GET['id5'];
+		//$conn = new mysqli("localhost", "root", "", "inventory");
+
+		$sql = "DELETE FROM category where cat_id = '$id5' ";
+
+		if ($conn->query($sql) == TRUE) {
+			header("location: ../category.php?msg=Category deleted successfully");
+		}else{
+			header("location: ../category.php?msg=Unable to delete this category");
 		}
 
 
