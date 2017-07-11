@@ -26,6 +26,7 @@
     <link href="assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
     <link href="assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <link href="assets/plugins/css-chart/css-chart.css" rel="stylesheet">
+		<link href="assets/plugins/css-chart/css-chart.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/colors/default-dark.css" id="theme" rel="stylesheet">
@@ -78,21 +79,21 @@
                     <ul id="sidebarnav">
                         <li><a  href="dashboard.php"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li>
-                            <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-shopping-cart"></i><span class="hide-menu">Sales</span></a>
+                            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu">Sales</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="new-sales.php">Enter Sales</a></li>
                                 <li><a href="view-sales.php">View Sales</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-download"></i><span class="hide-menu">Supply</span></a>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-truck-delivery"></i><span class="hide-menu">Supply</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="new-supply.php">Enter</a></li>
                                 <li><a href="view-supply-record.php">View</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-cubes"></i><span class="hide-menu"> Product</span></a>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-server"></i><span class="hide-menu"> Product</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="new-item.php">Add Product</a></li>
                                 <li><a href="view-item.php">View All Product</a></li>
@@ -100,7 +101,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-database"></i><span class="hide-menu"> Stock</span></a>
+                            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-database"></i><span class="hide-menu"> Stock</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="new-stock.php">Add Stock</a></li>
                                 <li><a href="view-stock.php">View All Stock</a></li>
@@ -108,7 +109,7 @@
                         </li>
                         <li class="nav-devider"></li>
                         <li>
-                            <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Employees/Users</span></a>
+                            <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees/Users</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="new-employee.php">Add</a></li>
                                 <li><a href="view-all-employees.php">View</a></li>
@@ -117,9 +118,9 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow " href="#" aria-expanded="false" data-toggle="tooltip" title="Report"><i class="fa fa-files-o"></i><span class="hide-menu">Report</span></a>
+                            <a class="has-arrow " href="#" aria-expanded="false" data-toggle="tooltip" title="Report"><i class="mdi mdi-file-multiple"></i><span class="hide-menu">Report</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="sales-report.php">Sales</a></li>
+                                <li><a href="report.php">Sales</a></li>
                                 <li><a href="widget-charts.html">This Year</a></li>
                             </ul>
                         </li>
