@@ -1,6 +1,6 @@
-<?php 
+<?php
 	ob_start();
-	session_start();  
+	session_start();
 
 	if(empty($_SESSION['inventoryUserEmail']) || !isset($_SESSION['inventoryUserEmail'])){
 
@@ -17,12 +17,12 @@
 		$items_name = $_POST['items_name'];
 		$quantity = $_POST['quantity'];
 		$date = date('Y-m-d');
-		$time = date('h:i:s:a');
+		$time = date('h:i:s');
 		$user = $_SESSION['inventoryUserFullname'];
 
 		$check = $conn->query("SELECT * FROM items where items_name='$items_name'");
 		if ($check->num_rows > 0 ){
-			$row = $check->fetch_assoc();    		
+			$row = $check->fetch_assoc();
     		$amount = ($_POST['quantity'] *$row['price']);
     		$gain = ($_POST['quantity'] *$row['gain']);
 
@@ -32,9 +32,9 @@
 
     		$sql_updates = "INSERT INTO `stock_record`(`stock_id`, `items_name`, `quantity`, `gain`, `amount`, `date`, `time`, `user`) VALUES ('$stock_id', '$items_name', '$quantity','$gain', '$amount', '$date', '$time','$user')";
     		if($conn->query($sql_updates) == true){
-    		//transfer record to update stock record 
+    		//transfer record to update stock record
     		header("location: update.php?page=stock&quantity=$quantity&amount=$amount&gain=$gain&item=$items_name&id=$stock_id");
-    		
+
     		}
     	}else{
     		//insert into stock table if stock not found

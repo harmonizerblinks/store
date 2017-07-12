@@ -16,7 +16,7 @@ include 'includes/nav.php';
                 <h4 class="card-title">View Sales Report</h4>
                 <h6 class="card-subtitle">Export data to Copy, Excel, PDF & Print</h6>
                 <div class="table-responsive m-t-40">
-                    <table class="table table-hover">
+                    <table id="example23" class="table table-hover table-striped table-bordered">
                       <thead>
                           <tr>
                               <th>S/N</th>

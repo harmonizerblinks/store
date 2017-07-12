@@ -23,7 +23,7 @@ include 'includes/nav.php';
                                              <th>Stocks ID</th>
                                              <th>Item Name</th>
                                              <th>Price</th>
-                                             <th>Total</th>
+                                             <th>Qty</th>
                                              <th>Profit</th>
                                              <th>Date</th>
                                              <th>Action</th>
@@ -35,7 +35,7 @@ include 'includes/nav.php';
                                              <th>Stocks ID</th>
                                              <th>Item Name</th>
                                              <th>Price</th>
-                                             <th>Total</th>
+                                             <th>Qty</th>
                                              <th>Profit</th>
                                              <th>Date</th>
                                              <th>Action</th>
